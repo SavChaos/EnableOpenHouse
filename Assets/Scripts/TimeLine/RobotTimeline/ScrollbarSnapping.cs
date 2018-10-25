@@ -10,13 +10,26 @@ using UnityEngine.EventSystems;
 public class ScrollbarSnapping : SerializedMonoBehaviour, IEndDragHandler
 {
     public RobotTimeline robotTimeline;
+    public ScrollRect scrollRect;
     public Scrollbar scrollbar;
     public AudioClip scrollEffect;
+
     //There must be as many snapValues as there are targets
     public List<float> snapValues = new List<float>();
 
     private float currentSnapValue;
     private int currentTargetPanel;
+
+    private void Awake()
+    {
+        Vector3 localPos = transform.localPosition;
+        scrollRect.onValueChanged.AddListener(OnValueChange);
+    }
+
+    private void OnDestroy()
+    {
+        scrollRect.onValueChanged.RemoveAllListeners();
+    }
 
     private void OnEnable()
     {
@@ -30,8 +43,10 @@ public class ScrollbarSnapping : SerializedMonoBehaviour, IEndDragHandler
         SnapTo(currentSnapValue);
     }
 
-    public void OnValueChange()
+    public void OnValueChange(Vector2 pos)
     {
+        Utils.PrintVec2(pos, "on val changed  ");
+
         //declare a new Target Panel 
         int newTargetPanel = 0;
 
@@ -46,7 +61,7 @@ public class ScrollbarSnapping : SerializedMonoBehaviour, IEndDragHandler
                 //That snapValue becomes the current snapValue
                 currentSnapValue = snapValues[i];
 
-                //Id of snapValue stored to acess corresponding targetPanel
+                //ID of snapValue stored to acess corresponding targetPanel
                 newTargetPanel = i;
             }
         }

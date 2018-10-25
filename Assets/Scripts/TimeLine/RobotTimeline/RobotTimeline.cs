@@ -94,17 +94,17 @@ public class RobotTimeline : SerializedMonoBehaviour
         //Sets orientation if Panel is odd or even in list
         if (i % 2 == 0)
         {
-            mainTimelineArea.LeftImage.rectTransform.anchorMin = new Vector2(1f, 0.5f);
+           /* mainTimelineArea.LeftImage.rectTransform.anchorMin = new Vector2(1f, 0.5f);
             mainTimelineArea.LeftImage.rectTransform.anchorMax = new Vector2(1f, 0.5f);
             mainTimelineArea.LeftImage.rectTransform.pivot = new Vector2(1f, 0.5f);
-            mainTimelineArea.MainText.rectTransform.localPosition = new Vector2(-225f, -6f);
+            mainTimelineArea.MainText.rectTransform.localPosition = new Vector2(-225f, -6f);*/
         }
         else
         {
-            mainTimelineArea.LeftImage.rectTransform.anchorMin = new Vector2(0f, 0.5f);
+          /*  mainTimelineArea.LeftImage.rectTransform.anchorMin = new Vector2(0f, 0.5f);
             mainTimelineArea.LeftImage.rectTransform.anchorMax = new Vector2(0f, 0.5f);
             mainTimelineArea.LeftImage.rectTransform.pivot = new Vector2(0f, 0.5f);
-            mainTimelineArea.MainText.rectTransform.localPosition = new Vector2(220f, -6f);
+            mainTimelineArea.MainText.rectTransform.localPosition = new Vector2(220f, -6f);*/
         }
     }
 }

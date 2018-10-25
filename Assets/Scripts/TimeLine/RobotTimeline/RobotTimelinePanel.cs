@@ -12,4 +12,9 @@ public class RobotTimelinePanel : MonoBehaviour
     [Required]
     public TextMeshProUGUI DateText;
     public Image LeftImage;
+
+    private void Awake()
+    {
+        gameObject.SetActive(false);
+    }
 }
