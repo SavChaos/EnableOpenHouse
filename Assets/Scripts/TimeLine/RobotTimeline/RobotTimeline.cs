@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using TMPro;
-using System.Linq;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
+using DG.Tweening;
 
 public class RobotTimeline : SerializedMonoBehaviour
 {
@@ -40,6 +38,7 @@ public class RobotTimeline : SerializedMonoBehaviour
         }
     }
 
+ 
     public void SetPanel(int i)
     {
         if (i < textMeshes.Count)
@@ -56,20 +55,23 @@ public class RobotTimeline : SerializedMonoBehaviour
             SetLayoutDefault();
             return;
         }
-        else
-        {
-            SetLayoutTimeline();
-        }
 
-        mainTimelineArea.MainText.text = dic[textMesh].bodyText;
-        mainTimelineArea.LeftImage.sprite = dic[textMesh].panelImage;
-        mainTimelineArea.DateText.text = dic[textMesh].dateText;
+        SetLayoutTimeline();
+
+        mainTimelineArea.DOKill();
+
         panelDateText.text = dic[textMesh].dateText;
+        mainTimelineArea.DateText.text = dic[textMesh].dateText;
+        mainTimelineArea.canvasGroup.DOFade(0, 0.5f).OnComplete(()=>
+        {
+            mainTimelineArea.MainText.text = dic[textMesh].bodyText;
+            mainTimelineArea.LeftImage.sprite = dic[textMesh].panelImage;
+            mainTimelineArea.canvasGroup.DOFade(1, 0.5f);
+        });
 
         //AudioManager.Instance.PlayClip(dic[textMesh].textAudio);
 
         SetPanelOrientation(i);
-
     }
 
     private void SetLayoutDefault()

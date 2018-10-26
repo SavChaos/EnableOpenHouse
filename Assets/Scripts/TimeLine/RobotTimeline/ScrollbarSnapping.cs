@@ -6,24 +6,38 @@ using TMPro;
 using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 public class ScrollbarSnapping : SerializedMonoBehaviour, IEndDragHandler
 {
     public RobotTimeline robotTimeline;
     public ScrollRect scrollRect;
-    public Scrollbar scrollbar;
     public AudioClip scrollEffect;
+    public Transform handle;
+    public Transform nodeGroup;
 
-    //There must be as many snapValues as there are targets
+    // There must be as many snapValues as there are targets
     public List<float> snapValues = new List<float>();
 
-    private float currentSnapValue;
+    [SerializeField]
     private int currentTargetPanel;
+    [SerializeField]
+    private float snapDuration = 0.3f;
 
     private void Awake()
     {
-        Vector3 localPos = transform.localPosition;
         scrollRect.onValueChanged.AddListener(OnValueChange);
+        foreach (RectTransform child in nodeGroup)
+        {
+            snapValues.Add(child.localPosition.x + child.rect.width/2f);
+        }
+
+        // Set first node of timeline as start position of the timeline bar 
+        Vector3 localPos = handle.localPosition;
+        handle.localPosition = new Vector3(-snapValues[0], localPos.y, localPos.z);
+
+        RectTransform rectTransform = (RectTransform)transform;
+        rectTransform.DOAnchorPosY(0, 0.5f).From();
     }
 
     private void OnDestroy()
@@ -31,65 +45,59 @@ public class ScrollbarSnapping : SerializedMonoBehaviour, IEndDragHandler
         scrollRect.onValueChanged.RemoveAllListeners();
     }
 
-    private void OnEnable()
-    {
-        currentSnapValue = snapValues[0];
-        SnapTo(currentSnapValue);
-    }
-
-    //Snaps to the currentSnapFloat when Hnadle is released
+    // Snaps to the currentSnapFloat when Hnadle is released
     public void OnEndDrag(PointerEventData data)
     {
-        SnapTo(currentSnapValue);
+        SnapToNearestElement();
     }
 
     public void OnValueChange(Vector2 pos)
     {
-        Utils.PrintVec2(pos, "on val changed  ");
-
-        //declare a new Target Panel 
+        // Declare a new Target Panel 
         int newTargetPanel = 0;
-
-        //Reset the currentSnapFloat to the first SnapValue
-        currentSnapValue = snapValues[0];
 
         for (int i = 1; i < snapValues.Count; i++)
         {
-            //If the difference of the current snapValue is greater than the one it is being compared to:
-            if (Mathf.Abs(scrollbar.value - currentSnapValue) > Mathf.Abs(scrollbar.value - snapValues[i]))
-            {
-                //That snapValue becomes the current snapValue
-                currentSnapValue = snapValues[i];
+            float handleX = -handle.transform.localPosition.x;
+            float distBetween = snapValues[i] - snapValues[i - 1];
+            float inBetweenPoint = snapValues[i - 1] + distBetween / 2f;
 
-                //ID of snapValue stored to acess corresponding targetPanel
-                newTargetPanel = i;
+            // If the current scroller position is between two time line nodes
+            if (handleX >= snapValues[i - 1] && handleX <= snapValues[i])
+            {
+                // Decide which node we are closer to
+                newTargetPanel = (handleX <= inBetweenPoint) ? i - 1 : i;
+                break;
+            }
+            else
+            {
+                if (handleX < snapValues[0])
+                {
+                    newTargetPanel = 0;
+                }
+                else if (handleX > snapValues[snapValues.Count - 1])
+                {
+                    newTargetPanel = snapValues.Count - 1;
+                }
             }
         }
 
-        //If the target panel has changed
+        // If the target panel has changed
         if (newTargetPanel != currentTargetPanel)
         {
-            //Play Sound Effect
-            //AudioManager.Instance.PlaySoundEffect(scrollEffect);
+            currentTargetPanel = newTargetPanel;
+
+            // Show the correct time line panel
+            robotTimeline.SetPanel(currentTargetPanel);
         }
-
-        //Set the new targetPanel as the currentTargetPanel
-        currentTargetPanel = newTargetPanel;
-
-        //Send the timeline the currentTargetPanel
-        robotTimeline.SetPanel(currentTargetPanel);
     }
 
-    //Snaps to float provided
-    public void SnapTo(float f)
+    // Snaps to float provided
+    public void SnapToNearestElement()
     {
-        scrollbar.value = f;
+        handle.transform.DOKill();  // Kill any existing tween
+        handle.transform.DOLocalMoveX(-snapValues[currentTargetPanel], snapDuration);
     }
 
-    //Snaps to snapValue at the Tranform's sibling index
-    public void SnapTo(Transform t)
-    {
-        scrollbar.value = snapValues[t.GetSiblingIndex()];
-    }
 
 }

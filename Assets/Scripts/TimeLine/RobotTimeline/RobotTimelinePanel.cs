@@ -12,6 +12,7 @@ public class RobotTimelinePanel : MonoBehaviour
     [Required]
     public TextMeshProUGUI DateText;
     public Image LeftImage;
+    public CanvasGroup canvasGroup;
 
     private void Awake()
     {
