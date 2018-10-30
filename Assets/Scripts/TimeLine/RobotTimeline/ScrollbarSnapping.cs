@@ -29,7 +29,10 @@ public class ScrollbarSnapping : SerializedMonoBehaviour, IEndDragHandler
         scrollRect.onValueChanged.AddListener(OnValueChange);
         foreach (RectTransform child in nodeGroup)
         {
-            snapValues.Add(child.localPosition.x + child.rect.width/2f);
+            if (!child.name.StartsWith("Marker"))
+            {
+                snapValues.Add(child.localPosition.x + child.rect.width / 2f);
+            }
         }
 
         // Set first node of timeline as start position of the timeline bar 

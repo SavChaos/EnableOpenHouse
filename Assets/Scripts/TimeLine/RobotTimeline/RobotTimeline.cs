@@ -11,6 +11,8 @@ public class RobotTimeline : SerializedMonoBehaviour
     public class RobotTimePeriod
     {
         public string bodyText;
+        public string headerText;
+        public string indexText;
         public Sprite panelImage;
         public AudioClip textAudio;
     }
@@ -23,6 +25,7 @@ public class RobotTimeline : SerializedMonoBehaviour
     public GameObject defaultTextBox;
     public GameObject timelineTextBox;
     public AudioClip defaultAudioClip;
+    [SerializeField] private float panelFadeDuration = 0.5f;
 
     private List<TextMeshProUGUI> textMeshes = new List<TextMeshProUGUI>();
 
@@ -30,7 +33,11 @@ public class RobotTimeline : SerializedMonoBehaviour
     {
         for (int i = 0; i < handle.transform.childCount; i++)
         {
-            textMeshes.Add(handle.transform.GetChild(i).GetComponent<TextMeshProUGUI>());
+            TextMeshProUGUI textMesh = handle.transform.GetChild(i).GetComponent<TextMeshProUGUI>();
+            if (!textMesh.name.StartsWith("Marker"))
+            {
+                textMeshes.Add(textMesh);
+            }
         }
     }
 
@@ -65,17 +72,23 @@ public class RobotTimeline : SerializedMonoBehaviour
             return;
         }
 
+        // Don't attempt to set a panel for a Time line key with no Info setup
+        if(!dic.ContainsKey(textMesh))
+        {
+            return;
+        }
+
         SetLayoutTimeline();
 
         mainTimelineArea.DOKill();
 
-        panelDateText.text = textMesh.text;
-        mainTimelineArea.DateText.text = textMesh.text;
-        mainTimelineArea.canvasGroup.DOFade(0, 0.5f).OnComplete(()=>
+        panelDateText.text = dic[textMesh].headerText;
+        mainTimelineArea.DateText.text = (string.IsNullOrEmpty(dic[textMesh].indexText)) ? textMesh.text : dic[textMesh].indexText;
+        mainTimelineArea.canvasGroup.DOFade(0, panelFadeDuration).OnComplete(()=>
         {
             mainTimelineArea.MainText.text = dic[textMesh].bodyText;
             mainTimelineArea.LeftImage.sprite = dic[textMesh].panelImage;
-            mainTimelineArea.canvasGroup.DOFade(1, 0.5f);
+            mainTimelineArea.canvasGroup.DOFade(1, panelFadeDuration);
         });
 
         //AudioManager.Instance.PlayClip(dic[textMesh].textAudio);
