@@ -11,7 +11,6 @@ public class RobotTimeline : SerializedMonoBehaviour
     public class RobotTimePeriod
     {
         public string bodyText;
-        public string dateText;
         public Sprite panelImage;
         public AudioClip textAudio;
     }
@@ -20,7 +19,7 @@ public class RobotTimeline : SerializedMonoBehaviour
     public GameObject handle;
     public TextMeshProUGUI panelDateText;
     public RobotTimelinePanel mainTimelineArea;
-    public RobotTimelinePanel defaultPanel;
+    [SerializeField] private RobotTimelinePanel startPanel;
     public GameObject defaultTextBox;
     public GameObject timelineTextBox;
     public AudioClip defaultAudioClip;
@@ -29,16 +28,26 @@ public class RobotTimeline : SerializedMonoBehaviour
 
     private void Awake()
     {
-        mainTimelineArea.gameObject.SetActive(false);
-        defaultPanel.gameObject.SetActive(true);
-
         for (int i = 0; i < handle.transform.childCount; i++)
         {
             textMeshes.Add(handle.transform.GetChild(i).GetComponent<TextMeshProUGUI>());
         }
     }
 
- 
+    private void Start()
+    {
+        if (startPanel)
+        {
+            startPanel.gameObject.SetActive(true);
+        }
+        else
+        {
+            mainTimelineArea.gameObject.SetActive(false);
+            SetPanel(0);
+        }
+    }
+
+
     public void SetPanel(int i)
     {
         if (i < textMeshes.Count)
@@ -60,8 +69,8 @@ public class RobotTimeline : SerializedMonoBehaviour
 
         mainTimelineArea.DOKill();
 
-        panelDateText.text = dic[textMesh].dateText;
-        mainTimelineArea.DateText.text = dic[textMesh].dateText;
+        panelDateText.text = textMesh.text;
+        mainTimelineArea.DateText.text = textMesh.text;
         mainTimelineArea.canvasGroup.DOFade(0, 0.5f).OnComplete(()=>
         {
             mainTimelineArea.MainText.text = dic[textMesh].bodyText;
@@ -76,11 +85,15 @@ public class RobotTimeline : SerializedMonoBehaviour
 
     private void SetLayoutDefault()
     {
+        // Show default start panel, if there is one
+        if (startPanel)
+        {
+            startPanel.gameObject.SetActive(true);
+        }
+
         mainTimelineArea.gameObject.SetActive(false);
         timelineTextBox.SetActive(false);
         defaultTextBox.SetActive(true);
-        defaultPanel.gameObject.SetActive(true);
-        //AudioManager.Instance.PlayClip(defaultAudioClip);
     }
 
     private void SetLayoutTimeline()
@@ -88,7 +101,15 @@ public class RobotTimeline : SerializedMonoBehaviour
         mainTimelineArea.gameObject.SetActive(true);
         timelineTextBox.SetActive(true);
         defaultTextBox.SetActive(false);
-        defaultPanel.gameObject.SetActive(false);
+
+        if (startPanel)
+        {
+            startPanel.gameObject.SetActive(false);
+        }
+        else
+        {
+            mainTimelineArea.canvasGroup.alpha = 0;
+        }
     }
 
     private void SetPanelOrientation(int i)
