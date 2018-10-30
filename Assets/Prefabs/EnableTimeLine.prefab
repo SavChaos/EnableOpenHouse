@@ -2536,12 +2536,9 @@ MonoBehaviour:
     - {fileID: 21300000, guid: d5c57d4625c394bfeac5283b488a5b18, type: 3}
     - {fileID: 114004106997422998}
     - {fileID: 21300000, guid: 4118c20af51f748adaf0c048ef1946bb, type: 3}
-    - {fileID: 114768364685714240}
-    - {fileID: 21300010, guid: 36d4ae3cca5ba514c9c4264d2f831ebb, type: 3}
-    - {fileID: 114736965646500598}
-    - {fileID: 21300000, guid: 3526264f880884d15b85a69ed4a97334, type: 3}
-    - {fileID: 114996040003803506}
-    - {fileID: 21300012, guid: 36d4ae3cca5ba514c9c4264d2f831ebb, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 114631076055649278}
     - {fileID: 21300000, guid: 78a262096ca4a46e7bc141151e4abd4e, type: 3}
     - {fileID: 114408993370098666}
@@ -2574,8 +2571,9 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 9d747c3c8916a443f877d72f6038977a, type: 3}
     - {fileID: 114874070995481436}
     - {fileID: 21300000, guid: 00115012a95d448fca25f67ab0eef7bf, type: 3}
-    - {fileID: 114178749228688172}
     - {fileID: 114858569748051826}
+    - {fileID: 21300000, guid: 2cb78ded008954fadafda921875c66af, type: 3}
+    - {fileID: 114178749228688172}
     - {fileID: 21300000, guid: 5ae6e8c5691cc4ded880949d119a0e2b, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -2631,9 +2629,7 @@ MonoBehaviour:
       Data: 3|RobotTimeline+RobotTimePeriod, Assembly-CSharp
     - Name: bodyText
       Entry: 1
-      Data: William Grey Walter, a scientist who studied human brains, created Elmer
-        and Elise. These two robots were shaped like turtles and could sense light
-        and objects around them, all by themselves.
+      Data: 'October,  2008-  We  volunteered  with  a  local  FIRST  Robotics  team  as  programming  mentors.    This  soon  evolved  into  adapting  our  video  training  videos  for  a  teenage  audience.    Over  the  season,  we  had  over  30,000  viewing  hours,  and  our  relationship  with  FIRST  began.    '
     - Name: panelImage
       Entry: 10
       Data: 3
@@ -2681,7 +2677,7 @@ MonoBehaviour:
       Data: 5|RobotTimeline+RobotTimePeriod, Assembly-CSharp
     - Name: bodyText
       Entry: 1
-      Data: 'October,  2008-  We  volunteered  with  a  local  FIRST  Robotics  team  as  programming  mentors.    This  soon  evolved  into  adapting  our  video  training  videos  for  a  teenage  audience.    Over  the  season,  we  had  over  30,000  viewing  hours,  and  our  relationship  with  FIRST  began.    '
+      Data: 'March,  2009-  We  were  introduced  to  LEGO  Education  North  America,  and  soon  began  working  on  teacher  resources  for  WeDo.    Over  the  years,  we  worked  on  similar  resources  for  LEGO  Mindstorms,  BuildtoExpress  and  Duplo.   '
     - Name: panelImage
       Entry: 10
       Data: 7
@@ -2705,10 +2701,34 @@ MonoBehaviour:
       Data: 6|RobotTimeline+RobotTimePeriod, Assembly-CSharp
     - Name: bodyText
       Entry: 1
-      Data: '2010-  Work  for  Pitsco,  including  a  Getting  Started  Guide  for  TETRIX,  built  from  the  ground  up,  including  curriculum  content,  graphics,  web  material '
+      Data: '2010-  Work  for  FIRST  Robotics  begins,  including  learning  resources  for  FTC,  a  guide  to  using  TETRIX  with  LabVIEW,  and  an  FTC  webinar  series '
     - Name: panelImage
+      Entry: 6
+      Data: 
+    - Name: textAudio
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
       Entry: 10
       Data: 9
+    - Name: 
+      Entry: 7
+      Data: 7|RobotTimeline+RobotTimePeriod, Assembly-CSharp
+    - Name: bodyText
+      Entry: 1
+      Data: '2010-  Work  for  Pitsco,  including  a  Getting  Started  Guide  for  TETRIX,  built  from  the  ground  up,  including  curriculum  content,  graphics,  web  material '
+    - Name: panelImage
+      Entry: 6
+      Data: 
     - Name: textAudio
       Entry: 6
       Data: 
@@ -2726,62 +2746,37 @@ MonoBehaviour:
       Data: 10
     - Name: 
       Entry: 7
-      Data: 7|RobotTimeline+RobotTimePeriod, Assembly-CSharp
+      Data: 8|RobotTimeline+RobotTimePeriod, Assembly-CSharp
     - Name: bodyText
       Entry: 1
       Data: '2010-  Work  for  SolidWorks,  a  tutorial  series  for  high  school  robotics,  another  tutorial  series  for  general  use  '
     - Name: panelImage
+      Entry: 6
+      Data: 
+    - Name: textAudio
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
       Entry: 10
       Data: 11
-    - Name: textAudio
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: 
-      Entry: 10
-      Data: 12
-    - Name: 
-      Entry: 7
-      Data: 8|RobotTimeline+RobotTimePeriod, Assembly-CSharp
-    - Name: bodyText
-      Entry: 1
-      Data: 'March,  2009-  We  were  introduced  to  LEGO  Education  North  America,  and  soon  began  working  on  teacher  resources  for  WeDo.    Over  the  years,  we  worked  on  similar  resources  for  LEGO  Mindstorms,  BuildtoExpress  and  Duplo.   '
-    - Name: panelImage
-      Entry: 10
-      Data: 13
-    - Name: textAudio
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: 
-      Entry: 10
-      Data: 14
     - Name: 
       Entry: 7
       Data: 9|RobotTimeline+RobotTimePeriod, Assembly-CSharp
     - Name: bodyText
       Entry: 1
-      Data: 2010-  Work  for  FIRST  Robotics  begins,  including  learning  resources  for  FTC,  a  guide  to  using  TETRIX  with  LabVIEW,  and  an  FTC  webinar  series  2011-  Work  for  National  Instruments  on  Core  1  and  2  training  for  industrial  programmers  using  LabVIEW,  converted  a  successful  in-class  training
-        course  to  a  self-paced,  online  version,  one  of  the  largest  e-learning  courses  for  graphical  programming
+      Data: 'December,  2011-  We  created  our  first  interactive  eBook  apps  for  iPad,  for  children  ages  7-11,  using  topics  like  philosophy  and  robotics. '
     - Name: panelImage
       Entry: 10
-      Data: 15
+      Data: 12
     - Name: textAudio
       Entry: 6
       Data: 
@@ -2796,16 +2791,17 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 16
+      Data: 13
     - Name: 
       Entry: 7
       Data: 10|RobotTimeline+RobotTimePeriod, Assembly-CSharp
     - Name: bodyText
       Entry: 1
-      Data: '2010-  Work  for  FIRST  Robotics  begins,  including  learning  resources  for  FTC,  a  guide  to  using  TETRIX  with  LabVIEW,  and  an  FTC  webinar  series '
+      Data: 2011-  Work  for  National  Instruments  on  Core  1  and  2  training  for  industrial  programmers  using  LabVIEW,  converted  a  successful  in-class  training
+        course  to  a  self-paced,  online  version,  one  of  the  largest  e-learning  courses  for  graphical  programming
     - Name: panelImage
       Entry: 10
-      Data: 17
+      Data: 14
     - Name: textAudio
       Entry: 6
       Data: 
@@ -2820,7 +2816,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 18
+      Data: 15
     - Name: 
       Entry: 7
       Data: 11|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -2829,7 +2825,7 @@ MonoBehaviour:
       Data: 'September,  2012-  TED  X  talk  on  the  intersection  of  philosophy  and  new  media  and  technology.      '
     - Name: panelImage
       Entry: 10
-      Data: 19
+      Data: 16
     - Name: textAudio
       Entry: 6
       Data: 
@@ -2844,7 +2840,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 20
+      Data: 17
     - Name: 
       Entry: 7
       Data: 12|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -2853,7 +2849,7 @@ MonoBehaviour:
       Data: 'July,  2012-  We  created  our  first  app  for  iPhone  and  Android,  an  introduction  to  famous  philosophers  for  both  big  and  little  thinkers.  '
     - Name: panelImage
       Entry: 10
-      Data: 21
+      Data: 18
     - Name: textAudio
       Entry: 6
       Data: 
@@ -2868,7 +2864,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 22
+      Data: 19
     - Name: 
       Entry: 7
       Data: 13|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -2878,7 +2874,55 @@ MonoBehaviour:
         \ System  to  support  several  of  our  customers\u2019projects. "
     - Name: panelImage
       Entry: 10
+      Data: 20
+    - Name: textAudio
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 10
+      Data: 21
+    - Name: 
+      Entry: 7
+      Data: 14|RobotTimeline+RobotTimePeriod, Assembly-CSharp
+    - Name: bodyText
+      Entry: 1
+      Data: 'November,  2013-  Enable  becomes  the  first  National  Instruments  Education  Specialty  Alliance  Partner,  helping  educators  update  and  integrate  labs  into  their  curriculum,  using  cutting-edge  hardware  and  software  (link  to  Gulf  Coast  case  study) '
+    - Name: panelImage
+      Entry: 10
+      Data: 22
+    - Name: textAudio
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: 
+      Entry: 10
       Data: 23
+    - Name: 
+      Entry: 7
+      Data: 15|RobotTimeline+RobotTimePeriod, Assembly-CSharp
+    - Name: bodyText
+      Entry: 1
+      Data: 'October,  2013-  Main  stage  presenters  at  DevLearn,  hands-on,  self-paced  learning  workshops  '
+    - Name: panelImage
+      Entry: 10
+      Data: 22
     - Name: textAudio
       Entry: 6
       Data: 
@@ -2896,10 +2940,10 @@ MonoBehaviour:
       Data: 24
     - Name: 
       Entry: 7
-      Data: 14|RobotTimeline+RobotTimePeriod, Assembly-CSharp
+      Data: 16|RobotTimeline+RobotTimePeriod, Assembly-CSharp
     - Name: bodyText
       Entry: 1
-      Data: 'November,  2013-  Enable  becomes  the  first  National  Instruments  Education  Specialty  Alliance  Partner,  helping  educators  update  and  integrate  labs  into  their  curriculum,  using  cutting-edge  hardware  and  software  (link  to  Gulf  Coast  case  study) '
+      Data: 'July,  2014-  Enable  supports  partners  MyMuCo,  to  launch  an  app  to  support  private  music  educators  and  students.  '
     - Name: panelImage
       Entry: 10
       Data: 25
@@ -2920,61 +2964,13 @@ MonoBehaviour:
       Data: 26
     - Name: 
       Entry: 7
-      Data: 15|RobotTimeline+RobotTimePeriod, Assembly-CSharp
-    - Name: bodyText
-      Entry: 1
-      Data: 'October,  2013-  Main  stage  presenters  at  DevLearn,  hands-on,  self-paced  learning  workshops  '
-    - Name: panelImage
-      Entry: 10
-      Data: 25
-    - Name: textAudio
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: 
-      Entry: 10
-      Data: 27
-    - Name: 
-      Entry: 7
-      Data: 16|RobotTimeline+RobotTimePeriod, Assembly-CSharp
-    - Name: bodyText
-      Entry: 1
-      Data: 'July,  2014-  Enable  supports  partners  MyMuCo,  to  launch  an  app  to  support  private  music  educators  and  students.  '
-    - Name: panelImage
-      Entry: 10
-      Data: 28
-    - Name: textAudio
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: 
-      Entry: 10
-      Data: 29
-    - Name: 
-      Entry: 7
       Data: 17|RobotTimeline+RobotTimePeriod, Assembly-CSharp
     - Name: bodyText
       Entry: 1
       Data: May,  2014-  Interactive  app  for  iPad  on  teaching  reasoning  and  argumentation  to  children  ages  7-11
     - Name: panelImage
       Entry: 10
-      Data: 30
+      Data: 27
     - Name: textAudio
       Entry: 6
       Data: 
@@ -2989,7 +2985,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 31
+      Data: 28
     - Name: 
       Entry: 7
       Data: 18|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -2998,7 +2994,7 @@ MonoBehaviour:
       Data: March  2015  -  Our  president  and  founder,  Ben  Zimmer,  who  not  only  delivered  an  amazing  presentation  yesterday  at  the  Learning  Solutions  conference  in  Orlando  (video  footage  will  be  posted  later),  but  also  brought  home  an  award.
     - Name: panelImage
       Entry: 10
-      Data: 32
+      Data: 29
     - Name: textAudio
       Entry: 6
       Data: 
@@ -3013,7 +3009,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 33
+      Data: 30
     - Name: 
       Entry: 7
       Data: 19|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -3022,7 +3018,7 @@ MonoBehaviour:
       Data: 'June  2015  -  We  published  Tinker  Thinkers,  a  guide  to  critical  thinking  for  readers  aged  7-10,  in  print,  kindle  and  iPad  app  format.   '
     - Name: panelImage
       Entry: 10
-      Data: 34
+      Data: 31
     - Name: textAudio
       Entry: 6
       Data: 
@@ -3037,7 +3033,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 35
+      Data: 32
     - Name: 
       Entry: 7
       Data: 20|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -3046,7 +3042,7 @@ MonoBehaviour:
       Data: 'July,  2013-  Development  on  Infinite  Octopus  begins,  starting  with  an  app  for  distance  labs  and  growing  into  a  total  lab  management  system.  '
     - Name: panelImage
       Entry: 10
-      Data: 36
+      Data: 33
     - Name: textAudio
       Entry: 6
       Data: 
@@ -3061,7 +3057,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 37
+      Data: 34
     - Name: 
       Entry: 7
       Data: 21|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -3085,7 +3081,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 38
+      Data: 35
     - Name: 
       Entry: 7
       Data: 22|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -3094,7 +3090,7 @@ MonoBehaviour:
       Data: 'April  2016  -  Enable  celebrated  its  10th  anniversary  as  we  celebrate  many  things,  with  good  food  and  good  company. '
     - Name: panelImage
       Entry: 10
-      Data: 39
+      Data: 36
     - Name: textAudio
       Entry: 6
       Data: 
@@ -3109,7 +3105,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 40
+      Data: 37
     - Name: 
       Entry: 7
       Data: 23|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -3120,7 +3116,7 @@ MonoBehaviour:
         \ given  \u035EThe  One  To  Watch\u035Faward."
     - Name: panelImage
       Entry: 10
-      Data: 41
+      Data: 38
     - Name: textAudio
       Entry: 6
       Data: 
@@ -3135,7 +3131,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 42
+      Data: 39
     - Name: 
       Entry: 7
       Data: 24|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -3144,7 +3140,7 @@ MonoBehaviour:
       Data: March  2017  -  We  announced  the  release  of  our  latest  app  for  kids,  Wiseland!
     - Name: panelImage
       Entry: 10
-      Data: 43
+      Data: 40
     - Name: textAudio
       Entry: 6
       Data: 
@@ -3159,7 +3155,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 44
+      Data: 41
     - Name: 
       Entry: 7
       Data: 25|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -3170,7 +3166,7 @@ MonoBehaviour:
         \ (medium-sized)  for  2016."
     - Name: panelImage
       Entry: 10
-      Data: 45
+      Data: 42
     - Name: textAudio
       Entry: 6
       Data: 
@@ -3185,7 +3181,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 46
+      Data: 43
     - Name: 
       Entry: 7
       Data: 26|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -3194,8 +3190,8 @@ MonoBehaviour:
       Data: "Sept  2018  \u2013Enable  grows  to  30  employees  and  moves  to  a
         \ brand  new  8,000  square  foot  office.  "
     - Name: panelImage
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 44
     - Name: textAudio
       Entry: 6
       Data: 
@@ -3210,7 +3206,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 10
-      Data: 47
+      Data: 45
     - Name: 
       Entry: 7
       Data: 27|RobotTimeline+RobotTimePeriod, Assembly-CSharp
@@ -3219,7 +3215,7 @@ MonoBehaviour:
       Data: 'March  2018  - Red  T  Media,  the  publishing  arm  of  Enable,  recently  made  the  list  of  winners  for  the  Reader  View  Reviewers  Choice  Awards! '
     - Name: panelImage
       Entry: 10
-      Data: 48
+      Data: 46
     - Name: textAudio
       Entry: 6
       Data: 
