@@ -2206,9 +2206,8 @@ MonoBehaviour:
     panelImage: {fileID: 21300000, guid: 805d4a7af71864d889d137423282adda, type: 3}
     textAudio: {fileID: 0}
   - key: {fileID: 114578219050008480}
-    bodyText: "Our  president,  Ben  Zimmer  presented  as  part  of  the  4@4  Start-up
-      \ session,  and  at  the  awards  ceremony,  we  were  given  \u035EThe  One
-      \ To  Watch\u035Faward."
+    bodyText: Our  president,  Ben  Zimmer  presented  as  part  of  the  4@4  Start-up  session,  and  at  the  awards  ceremony,  we  were  given  "The  One  To  Watch"
+      award.
     headerText: June, 2016
     indexText: 
     panelImage: {fileID: 21300000, guid: c2f1dc73591784f8db117c24368aa2e5, type: 3}
