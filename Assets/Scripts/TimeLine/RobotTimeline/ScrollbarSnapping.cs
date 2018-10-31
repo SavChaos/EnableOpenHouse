@@ -1,14 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector;
-using TMPro;
-using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 
-public class ScrollbarSnapping : SerializedMonoBehaviour, IEndDragHandler
+public class ScrollbarSnapping : MonoBehaviour, IEndDragHandler
 {
     public RobotTimeline robotTimeline;
     public ScrollRect scrollRect;

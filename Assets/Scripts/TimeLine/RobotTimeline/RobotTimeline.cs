@@ -1,22 +1,22 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector;
 using TMPro;
 using DG.Tweening;
 
-public class RobotTimeline : SerializedMonoBehaviour
+public class RobotTimeline : MonoBehaviour
 {
-    [System.Serializable]
+    [Serializable]
     public class RobotTimePeriod
     {
+        public TextMeshProUGUI key;
         public string bodyText;
         public string headerText;
         public string indexText;
         public Sprite panelImage;
         public AudioClip textAudio;
     }
-
+    public List<RobotTimePeriod> timelineList;
     public Dictionary<TextMeshProUGUI, RobotTimePeriod> dic = new Dictionary<TextMeshProUGUI, RobotTimePeriod>();
     public GameObject handle;
     public TextMeshProUGUI panelDateText;
@@ -38,6 +38,12 @@ public class RobotTimeline : SerializedMonoBehaviour
             {
                 textMeshes.Add(textMesh);
             }
+        }
+
+        for (int i = 0; i < timelineList.Count; i++)
+        {
+            RobotTimePeriod tp = timelineList[i];
+            dic.Add(tp.key, tp);
         }
     }
 
