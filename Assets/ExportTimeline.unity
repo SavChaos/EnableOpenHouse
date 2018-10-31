@@ -869,6 +869,29 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114283381033919668, guid: 6b2017ecbc6384234a291fe9833f404f,
+        type: 2}
+      propertyPath: timelineList.Array.data[16].panelImage
+      value: 
+      objectReference: {fileID: 21300000, guid: a4cb1637179c54660abfa6f2aeb635ea,
+        type: 3}
+    - target: {fileID: 114283381033919668, guid: 6b2017ecbc6384234a291fe9833f404f,
+        type: 2}
+      propertyPath: timelineList.Array.data[4].panelImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 2b85ab39739ce4806bb509b324d2c2b8,
+        type: 3}
+    - target: {fileID: 114283381033919668, guid: 6b2017ecbc6384234a291fe9833f404f,
+        type: 2}
+      propertyPath: timelineList.Array.data[9].bodyText
+      value: "We  created  our  own  in-house  Learning  Management  System  to  support
+        \ several  of  our  customers\u2019 projects. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114283381033919668, guid: 6b2017ecbc6384234a291fe9833f404f,
+        type: 2}
+      propertyPath: timelineList.Array.data[16].bodyText
+      value: 'Infinite  Octopus  ARMS  is  launched,  an  app  that  allows  P-20  teachers  to  bring  augmented  reality  into  their  classrooms.  '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b2017ecbc6384234a291fe9833f404f, type: 2}
   m_IsPrefabAsset: 0

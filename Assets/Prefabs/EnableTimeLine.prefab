@@ -2112,7 +2112,7 @@ MonoBehaviour:
     bodyText: 'Work  for  SolidWorks,  a  tutorial  series  for  high  school  robotics,  another  tutorial  series  for  general  use '
     headerText: 2010
     indexText: 2010 (Part 1)
-    panelImage: {fileID: 21300000, guid: a4cb1637179c54660abfa6f2aeb635ea, type: 3}
+    panelImage: {fileID: 21300000, guid: 2b85ab39739ce4806bb509b324d2c2b8, type: 3}
     textAudio: {fileID: 0}
   - key: {fileID: 114736965646500598}
     bodyText: Work  for  Pitsco,  including  a  Getting  Started  Guide  for  TETRIX,  built  from  the  ground  up,  including  curriculum  content,  graphics,  web  material
@@ -2140,7 +2140,7 @@ MonoBehaviour:
     textAudio: {fileID: 0}
   - key: {fileID: 114683108432698266}
     bodyText: "We  created  our  own  in-house  Learning  Management  System  to  support
-      \ several  of  our  customers\u2019projects. "
+      \ several  of  our  customers\u2019 projects. "
     headerText: March, 2012
     indexText: 
     panelImage: {fileID: 21300000, guid: 1bf47387f85f04213bcb010d3e41a319, type: 3}
@@ -2182,10 +2182,10 @@ MonoBehaviour:
     panelImage: {fileID: 21300000, guid: ea810bc9c5d6247aca69cef43357a3c0, type: 3}
     textAudio: {fileID: 0}
   - key: {fileID: 114492643108847440}
-    bodyText: 'Infinite  Octopus  ARMS  is  launched,  and  app  that  allows  P-20  teachers  to  bring  augmented  reality  into  their  classrooms.  '
+    bodyText: 'Infinite  Octopus  ARMS  is  launched,  an  app  that  allows  P-20  teachers  to  bring  augmented  reality  into  their  classrooms.  '
     headerText: January, 2015
     indexText: 
-    panelImage: {fileID: 21300000, guid: 2b85ab39739ce4806bb509b324d2c2b8, type: 3}
+    panelImage: {fileID: 21300000, guid: a4cb1637179c54660abfa6f2aeb635ea, type: 3}
     textAudio: {fileID: 0}
   - key: {fileID: 114972513482442740}
     bodyText: Our  president  and  founder,  Ben  Zimmer,  who  not  only  delivered  an  amazing  presentation  yesterday  at  the  Learning  Solutions  conference  in  Orlando  (video  footage  will  be  posted  later),  but  also  brought  home  an  award.
